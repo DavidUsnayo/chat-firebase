@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT Firebase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./docs/registro.css">
+    <link rel="stylesheet" href="./docs/perfil.css">
+    <link rel="stylesheet" href="./docs/galeria.css">
+</head>
+<body>
+    <div id="caja">
+        <div class="caja_registro">
+            <div class="caja_flex">
+                <div class="registro">
+                    <div class="perfil_usuario"> <img id="foto"> </div>
+                    <div class="seleccion_foto">
+                        <img src="./assets/icons8-león-100.png" alt="perfil" class="perfil_imagen" data-url="./assets/icons8-león-100.png">
+                        <img src="./assets/icons8-pingüino-100.png" alt="perfil" class="perfil_imagen" data-url="./assets/icons8-pingüino-100.png">
+                        <img src="./assets/icons8-lobo-100.png" alt="perfil" class="perfil_imagen" data-url="./assets/icons8-lobo-100.png">
+                        <img src="./assets/icons8-vaca-100.png" alt="perfil" class="perfil_imagen" data-url="./assets/icons8-vaca-100.png">
+                    </div>
+                    <input type="text" placeholder="Nombre" id="nombre_crear">
+                    <input type="text" placeholder="Contraseña" id="pass_crear">
+                    <button class="boton_registrar">Crear cuenta</button>
+                    <button class="boton_sesion">Iniciar sesion</button>
+                    <p id="contraExiste">Contraseña ya existente</p>
+                </div>
+                <div class="login">
+                    <h2>INICIAR SESION</h2>
+                    <input type="text" placeholder="nombre" id="nombre_login">
+                    <input type="password" placeholder="contraseña" id="pass_login">
+                    <button class="boton_entrar">Entrar a cuenta</button>
+                    <button class="boton_crear">Crear cuenta</button>
+                    <p id="contraMal">La contreseña no coincide</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="navegacion">
+                <nav class="nav">
+                    <div class="menu">
+                        <h1 id="chat">CHAT</h1>
+                        <div>
+                            <p id="name_superior"></p>
+                            <p><img alt="perfil" id="img_superior"> </p>
+                        </div>    
+                    </div>
+                    <div class="menu b">
+                        <button class="boton">Registros</button>
+                        <button class="boton">Galeria</button>
+                    </div>
+                </nav>
+            </div>    
+            <div class="caja_registros">
+                <div class="uno">
+                    <div class="all">
+                        <!-- todos los registrados -->
+                    </div>
+                </div>
+                <div class="uno ga">
+                    <dialog id="modal">
+                        <img src="" id="imagen_modal">
+                        <button id="btn_cerrar">✕</button>
+                    </dialog>
+                    <form class="form">
+                        <input type="text" id="entrada" placeholder="Buscar">
+                        <button> <img src="./assets/icons8-lupa-100.png" alt="lupa"> </button>
+                    </form>
+                    <div class="galeria">
+                        <div class="column_uno"></div>
+                        <div class="column_dos"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="caja_mensajes">
+                <div class="info">
+                    <p id="back"> <img src="./assets/icons8-flecha-100.png" alt=""> </p>
+                    <img src="" alt="" id="imagen_info">
+                    <h3 id="nombre_info">David</h3>
+                </div>
+                <div class="caja_registros men">
+                    <div id="mensajeria">
+                        <!-- mensajes de los hablantes -->
+                    </div>
+                </div>
+                <form id="form_message">
+                    <img id="imagenCargada" src="">
+                    <img src="./assets/cara.png" alt="" id="cara">
+                    <div id="caras">
+                        <p>🦖</p>
+                        <p>😎</p>
+                        <p>😂</p>
+                        <p>😁</p>
+                        <p>😀</p>
+                    </div>
+                    <input type="text" id="texto" placeholder="Mensaje">
+                    <label for="archivo">
+                        <input type="file" id="archivo" accept=".jpg,.png"> <img src="./assets/icons8-subir-100.png"> </p>
+                    </label>
+                    <button> <img src="./assets/icons8-flecha-responder-100.png" alt="responder"> </button>
+                </form>
+            </div>
+            <dialog class="dialog">
+                <div class="modalContainer">
+                    <div class="blue"> <p>✕</p> </div>
+                    <div class="caja_datos_profile">
+                        <!--  -->
+                    </div>
+                    <p id="actual">Perfil actualizado</p>
+                    <button class="actualizar_perfil">Actualizar perfil</button>
+                    <form class="box_btn">
+                        <button id="eliminarCuenta">Eliminar cuenta</button>
+                        <button id="cerrarSesion" type="submit">Cerrar sesion</button>
+                    </form>
+                    <div class="seguridad">
+                        <h3>Estas seguro que quieres eliminar tu cuenta?</h3>
+                        <button class="si">SI</button>
+                        <button class="no">NO</button>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+        
+    </main>
+
+<script type="module" src="index.js"></script>
+<script type="module" src="./docs/registro.js"></script>
+<script type="module" src="./docs/perfil.js"></script>
+<script src="./docs/galeria.js"></script>
+</body>
+</html>

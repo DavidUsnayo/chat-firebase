@@ -1,0 +1,108 @@
+#caja{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:5;
+    background: #D3CCE3;
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.caja_registro{
+    width:340px;
+    padding:20px;
+    overflow:hidden;
+}
+.caja_flex{
+    display:flex;
+    gap:100px;
+    transition:0.7s;
+}
+.registro{
+    background:rgb(210, 197, 197);
+    min-width:340px;
+    height:400px;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+.perfil_usuario{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:rgb(240, 239, 237);
+}
+.perfil_usuario img{
+    width:100%;
+}
+.seleccion_foto img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:white;
+    margin:15px 2px;
+}
+.registro input,
+.login input{
+    width:240px;
+    padding:8px 10px;
+    border-radius:20px;
+    border:0;
+    outline:0;
+    margin:7px 0px;
+    color:rgb(36, 36, 36);
+    font-size:17px;
+}
+.boton_registrar,
+.boton_entrar{
+    background:rgb(57, 154, 244);
+    padding:7px 20px;
+    margin:5px;
+    margin-top:17px;
+    border:0;
+    color:white;
+    border-radius:20px;
+    font-size:17px;
+}
+.boton_sesion,
+.boton_crear{
+    background:rgb(248, 248, 248);
+    padding:5px 15px;
+    margin:5px;
+    border:0;
+    border-radius:20px;
+    opacity:70%;
+}
+
+/* LOGIN */
+.login{
+    min-width:340px;
+    height:400px;
+    background:rgb(210, 197, 197);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-radius:20px;
+    position:relative;
+}
+#contraExiste,
+#contraMal{
+    background:rgba(235, 3, 3, 0.84);
+    border-radius:7px;
+    color:rgb(237, 237, 237);
+    position:absolute;
+    bottom:108px;
+    padding:4px 12px;
+    font-size:11px;
+    transition:0.8;
+}
+#contraExiste{opacity:0%;}
+#contraMal{opacity:0%; bottom:173px}
